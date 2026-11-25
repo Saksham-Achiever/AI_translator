@@ -54,7 +54,7 @@ st.markdown("""
     color: #6b5b4a; font-size: 0.9rem; margin: 0;
     letter-spacing: 0.5px;
 ">
-    Made by ChammChamm· FY, Student, YCCE CSE
+    Made by ChammChamm· FY Student, YCCE CSE
 </p>
 </div>
 """, unsafe_allow_html=True)       
