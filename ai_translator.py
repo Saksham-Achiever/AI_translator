@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit as st 
 from google import genai
 from dotenv import load_dotenv
+load_dotenv()
 
 client = genai.Client()
 model_list=["gemini-3.1-flash-lite","gemini-3.5-flash-lite","gemini-4-hydrogen"]
