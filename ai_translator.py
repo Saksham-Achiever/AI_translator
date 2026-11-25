@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit as st 
 from google import genai
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(r"C:\Users\Saksham\OneDrive\Documents\genAI\frontend\.env")
 client = genai.Client()
 model_list=["gemini-3.1-flash-lite","gemini-3.5-flash-lite","gemini-4-hydrogen"]
 
@@ -13,60 +13,35 @@ import streamlit as st
 
 st.set_page_config(page_title="AI Translator", layout="wide")
 
-st.markdown(
-    """
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@600&display=swap');
-
-        .minimal-web-title {
-            padding: 0.4rem 0 0.95rem 0;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(186, 230, 253, 0.25);
-            position: relative;
-        }
-
-        .minimal-web-title::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            width: 110px;
-            height: 2px;
-            background: linear-gradient(90deg, #93C5FD, #FFFFFF);
-            box-shadow: 0 0 12px rgba(147, 197, 253, 0.8);
-            border-radius: 999px;
-        }
-
-        .minimal-web-title h1 {
-            margin: 0;
-            line-height: 1.1;
-            font-size: clamp(1.9rem, 3.8vw, 2.6rem);
-        }
-
-        .minimal-ai {
-            font-family: 'Instrument Serif', serif;
-            font-style: italic;
-            font-weight: 400;
-            color: #93C5FD;
-            text-shadow: 0 0 16px rgba(147, 197, 253, 0.65);
-            padding-right: 0.14em;
-        }
-
-        .minimal-word {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            color: #FFFFFF;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.22);
-        }
-    </style>
-
-    <header class="minimal-web-title">
-        <h1><span class="minimal-ai">AI</span><span class="minimal-word">Translator</span></h1>
-    </header>
-    """,
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<div style="text-align:center; padding:20px 0;">
+<pre style="
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    display: inline-block;
+    background: linear-gradient(180deg, #1a0a00, #0d0d0d);
+    border-radius: 14px;
+    padding: 22px 30px;
+    border: 3px double #ff6a00;
+">
+<span style="color:#ff6a00;"> ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ </span>
+<span style="color:#ffffff;">  █   █     █     </span>
+<span style="color:#ffffff;">  █   █     █     </span>
+<span style="color:#ffffff;">  █   █     █     </span>
+<span style="color:#ffffff;">  █   █     █     </span>
+<span style="color:#ffffff;"> ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ </span>
+</pre>
+<h1 style="
+    font-size: 2.4rem; font-weight: 900; margin: 12px 0 4px;
+    background: linear-gradient(90deg, #ff6a00, #fff, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+">AI TRANSLATOR</h1>
+<p style="color:#888; font-size:1rem;">~ Breaking Language Barriers ~</p>
+</div>
+""", unsafe_allow_html=True)
 col1 , col2 , col3 = st.columns([5,1,5])
 
 #st.caption("total characters:"+ str(len(text)))
