@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit as st 
 from google import genai
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(r"C:\Users\Saksham\OneDrive\Documents\genAI\frontend\.env")
 
 client = genai.Client()
 model_list=["gemini-3.1-flash-lite","gemini-3.5-flash-lite","gemini-4-hydrogen"]
@@ -14,39 +14,63 @@ import streamlit as st
 
 st.set_page_config(page_title="AI Translator", layout="wide")
 
+import streamlit as st
+
+import streamlit as st
+
+import streamlit as st
+
+    
+import streamlit as st
+
 st.markdown("""
-<div style="text-align:center; padding:20px 0;">
+<div style="text-align:center; padding:24px 0;">
 <pre style="
     font-family: 'Courier New', monospace;
-    font-size: 1.8rem;
-    line-height: 1.4;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
     display: inline-block;
-    background: linear-gradient(180deg, #1a0a00, #0d0d0d);
-    border-radius: 14px;
-    padding: 22px 30px;
-    border: 3px double #ff6a00;
+    color: #c9956b;
 ">
-<span style="color:#ff6a00;"> ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄ </span>
-<span style="color:#ffffff;">  █   █     █     </span>
-<span style="color:#ffffff;">  █   █     █     </span>
-<span style="color:#ffffff;">  █   █     █     </span>
-<span style="color:#ffffff;">  █   █     █     </span>
-<span style="color:#ffffff;"> ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ </span>
+  ██╗  ██╗   ██████╗   █████╗
+  ██║  ██║  ██╔═══██╗ ██╔══██╗
+  ███████║  ██║   ██║ ███████║
+  ██╔══██║  ██║   ██║ ██╔══██║
+  ██║  ██║  ╚██████╔╝ ██║  ██║
+  ╚═╝  ╚═╝   ╚═════╝  ╚═╝  ╚═╝
 </pre>
 <h1 style="
-    font-size: 2.4rem; font-weight: 900; margin: 12px 0 4px;
-    background: linear-gradient(90deg, #ff6a00, #fff, #ff6a00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 4px;
+    font-size: 2.6rem; font-weight: 900; margin: 10px 0 4px;
+    color: #e8c9a0;
+    letter-spacing: 2px;
 ">AI TRANSLATOR</h1>
-<p style="color:#888; font-size:1rem;">~ Breaking Language Barriers ~</p>
+<p style="
+    color: #8b7355; font-size: 1rem; letter-spacing: 2px;
+    margin-bottom: 20px; font-family: monospace;
+">Translate in any language</p>
+
+<p style="
+    color: #6b5b4a; font-size: 0.9rem; margin: 0;
+    letter-spacing: 0.5px;
+">
+    Made by ChammChamm· FY, Student, YCCE CSE
+</p>
 </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)       
 col1 , col2 , col3 = st.columns([5,1,5])
 
 #st.caption("total characters:"+ str(len(text)))
-languages=[ "English","Marathi","Hindi", "Spanish", "French", "German", "Italian", "Portuguese", "Dutch", "Swedish", "Norwegian", "Danish" ]
+languages=[ "English", "Mandarin Chinese", "Hindi", "Spanish", "French",
+    "Arabic", "Bengali", "Russian", "Portuguese", "Urdu",
+    "Indonesian", "German", "Japanese", "Swahili", "Turkish",
+    "Marathi", "Telugu", "Tamil", "Punjabi", "Italian",
+    "Korean", "Vietnamese", "Persian Farsi", "Hausa", "Thai",
+    "Gujarati", "Kannada", "Malay", "Dutch", "Greek",
+    "Hebrew", "Polish", "Czech", "Romanian", "Hungarian",
+    "Zulu", "Xhosa", "Amharic", "Pashto", "Sinhala",
+    "Burmese", "Nepali", "Serbian", "Croatian", "Bulgarian",
+    "Slovak", "Ukrainian ", "Kazakh", "Mongolian", "Armenian"]
 with col1:
     source_language=st.selectbox("From:",languages)
 with col2:
