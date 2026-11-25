@@ -98,4 +98,4 @@ if st.button("Translate"):
             input=text
         )
     with right:
-        st.text_area("Translation",value=response.output_text,key=1,placeholder="Hello, how are you mate?",max_chars=200)
+        st.text_area("Translation",value=response.output_text,key=2,placeholder="Hello, how are you mate?",max_chars=200)
